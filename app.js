@@ -1,37 +1,9 @@
-// const http = require('http');
-
-// const hostname = '0.0.0.0';
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World\n');
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-
-
-// WORKING AZURE
-// const http = require('http');
-// const port=process.env.PORT || 3000
-// const server = http.createServer((req, res) => {
-// res.statusCode = 200;
-// res.setHeader('Content-Type', 'text/html');
-// res.end('<h1>Hello World</h1>');
-// });
-// server.listen(port,() => {
-// console.log(`Server running at port `+port);
-// });
-
-var http = require('http');
-var fs = require('fs');
-http.createServer(function (req, res) {
-  fs.readFile('index.html', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    res.end();
-  });
-}).listen(8080);
+const exec = require('child_process').exec;
+var yourscript = exec('sh hi.sh',
+        (error, stdout, stderr) => {
+            console.log(stdout);
+            console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+});
