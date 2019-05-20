@@ -1,38 +1,24 @@
-// const http = require('http');
+// Testing app
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
 
-// const hostname = '0.0.0.0';
-// const port = 3000;
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World\n');
-// });
+router.get('/about',function(req,res){
+  res.sendFile(path.join(__dirname+'/about.html'));
+});
 
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
+router.get('/sitemap',function(req,res){
+  res.sendFile(path.join(__dirname+'/sitemap.html'));
+});
 
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
 
-// WORKING AZURE
-// const http = require('http');
-// const port=process.env.PORT || 3000
-// const server = http.createServer((req, res) => {
-// res.statusCode = 200;
-// res.setHeader('Content-Type', 'text/html');
-// res.end('<h1>Hello World</h1>');
-// });
-// server.listen(port,() => {
-// console.log(`Server running at port `+port);
-// });
-
-// html deployed
-var http = require('http');
-var fs = require('fs');
-http.createServer(function (req, res) {
-  fs.readFile('index.html', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    res.end();
-  });
-}).listen(8080);
+console.log('Running at Port 3000');
