@@ -43,3 +43,7 @@ http.createServer(function (req, res) {
     res.end();
   });
 }).listen(1337);
+
+const port = process.env.PORT || 1337;
+
+console.log("Server running at http://localhost:%d", port);
