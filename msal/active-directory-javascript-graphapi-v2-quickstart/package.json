@@ -1,0 +1,16 @@
+{
+  "name": "active-directory-javascript-graphapi-v2",
+  "license": "MIT",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.0",
+    "morgan": "^1.9.1",
+    "path": "^0.11.14"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "===========================================================",
+  "version": "1.0.0",
+  "author": ""
+}

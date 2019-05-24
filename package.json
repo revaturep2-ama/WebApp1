@@ -8,8 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/revaturep2-ama/WebApp1.git",
-    "start": "node /home/site/repository/app.js"
+    "url": "git+https://github.com/revaturep2-ama/WebApp1.git"
+    //"start": "node /home/site/repository/app.js"
   },
   "author": "",
   "license": "ISC",
