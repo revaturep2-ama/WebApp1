@@ -4,12 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node /home/site/repository/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/revaturep2-ama/WebApp1.git",
-    "start": "node /home/site/repository/app.js"
   },
   "author": "",
   "license": "ISC",
