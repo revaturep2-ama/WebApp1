@@ -9,7 +9,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 // Initialize variables.
-const port = 3000;
+const port=process.env.PORT || 1337
 
 // Configure morgan module to log all requests.
 app.use(morgan('dev'));
