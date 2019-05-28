@@ -86,7 +86,9 @@ app.post('/createVM', function (req, res) {
 
 //add the router
 app.use('/', router);
-app.listen(process.env.port || 3000);
+app.listen(process.env.port || 4000);
+console.log('Running at Port 4000');
 
 
-
+// sudo lsof -i :4000
+// kill -9 {PID}
