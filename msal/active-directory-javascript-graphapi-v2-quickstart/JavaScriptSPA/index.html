@@ -136,7 +136,8 @@
     //If you as a developer are testing using Edge InPrivate mode, please add "isEdge" to the if check
 
     // can change this to default an experience outside browser use
-    var loginType = isIE ? "REDIRECT" : "POPUP";
+    // var loginType = isIE ? "REDIRECT" : "POPUP";
+    var loginType = 'REDIRECT';
 
     // runs on page load, change config to try different login types to see what is best for your application
     if (loginType === 'POPUP') {
