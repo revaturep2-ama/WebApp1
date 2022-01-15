@@ -19,6 +19,6 @@
   "homepage": "https://github.com/revaturep2-ama/WebApp1#readme",
   "dependencies": {
     "express": "^4.17.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   }
 }
